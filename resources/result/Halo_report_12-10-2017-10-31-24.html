@@ -1,0 +1,344 @@
+<html >
+	<head>
+    	
+    <style type="text/css">
+	
+	
+	
+	
+	.ratingTD
+	{
+	 border: 0;
+	 border-top:0;
+	 padding-top:0;
+	 padding-bottom:20;
+	 
+	}
+	
+	.rating
+{
+ border: 1px solid black;
+    border-collapse:collapse;   
+}
+tr.header
+{
+	
+    cursor:pointer;
+	
+}
+.header .sign:after{
+  content:"+";
+  display:inline-block;      
+}
+.header.expand .sign:after{
+  content:"-";
+ }
+ 
+ .Info
+{
+    COLOR: #A52A2A;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+
+
+
+    
+	.hl_qt  { color: white; font-size: 24pt; font-family: Mic Shell Dlg; background-color: #666; text-align: center; padding: 0px 3px 3px }
+.hl0
+ { color: #999; font-weight: bold; font-size: 18pt; font-family: Mic Shell Dlg; text-align: center; padding: 2px 3px; border-bottom: 3px dotted #999 }
+.hl0_name { color: #999; font-weight: normal; font-size: 18pt; font-family: Mic Shell Dlg; text-align: center; padding: 2px 3px; border-bottom: 3px dotted #999 }
+.hl1
+{
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: bold
+}
+.hl2
+{
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bold
+}
+.hl3 { color: #666; font-weight: bold; font-size: 10pt; font-family: Mic Shell Dlg; height: 28px }
+.hl1name
+{
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 16pt;
+    FONT-WEIGHT: normal
+}
+.bg_yellow
+{
+    BACKGROUND-COLOR: #fc0
+}
+.bg_gray_eee
+{
+    BACKGROUND-COLOR: #eee
+}
+.bg_gray_ccc { background-color: #ccc }
+.bg_gray_999 { background-color: #999 }
+.bg_midblue
+{
+    BACKGROUND-COLOR: #99c
+}
+.bg_ligtblue
+{
+    BACKGROUND-COLOR: #ccf
+}
+.bg_darkblue
+{
+    BACKGROUND-COLOR: #669
+}
+.text
+ { font-size: 10pt; font-family: Mic Shell Dlg }
+.text_small
+{
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 8pt
+}
+.text_pitzi
+{
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 6.5pt
+}
+.text_bold
+{
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-WEIGHT: bold
+}
+
+
+.Failed
+{
+    COLOR: #f03;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+.FailedLow
+{
+    COLOR: #190005;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 13pt;    
+}
+
+.FailedHigh
+{
+    COLOR: #f03;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bold
+}
+.Passed
+{
+    COLOR: #096;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+
+.Done
+{
+    COLOR: #096;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bold
+}
+
+.PassedHigh
+{
+    COLOR: #096;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 13pt;
+    FONT-WEIGHT: bold
+}
+
+.tablehl
+{
+    BACKGROUND-COLOR: #eee;
+    COLOR: #669;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    LINE-HEIGHT: 14pt
+}
+A
+{
+    COLOR: #33f;
+    FONT-FAMILY: Mic Shell Dlg
+}
+A:hover
+{
+    COLOR: #f03;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-WEIGHT: bold
+}
+.Condition
+{
+    COLOR: #333399;
+    FONT-FAMILY: Mic Shell Dlg;
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold
+}
+
+body { font-family: Mic Shell Dlg }
+
+.brake { font-size: 1px; font-family: Mic Shell Dlg; background-color: #366; border-top: 15px solid white; border-bottom: 15px solid white; width: 100%; height: 35px }
+.iteration_border { padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-top: 3px solid #999; border-bottom: 3px solid #999; border-left: 3px solid #999 }
+.iteration_head { color: white; font-weight: bold; font-size: 12px; font-family: Mic Shell Dlg; background-color: #999; text-align: center; padding: 3px 3px 1px }
+.action_border  { padding-top: 5px; padding-bottom: 5px; padding-left: 10px; border-top: 3px solid #ccc; border-bottom: 3px solid #ccc; border-left: 3px solid #ccc }
+.action_head  { color: black; font-weight: bold; font-size: 12px; font-family: Mic Shell Dlg; background-color: #ccc; text-align: center; padding: 3px 3px 1px }
+.table_frame { padding: 3px; border: solid 1px #669 }
+.table_hl   { color: #669; font-weight: bold; font-size: 10pt; line-height: 14pt; font-family: Mic Shell Dlg; padding-right: 2px; padding-left: 2px; border-top: 1px solid #669; border-bottom: 1px solid #669 }
+.table_cell  { vertical-align: top; padding: 3px; border-bottom: 1px solid #eee; overflow: visible }
+p { font-size: 8pt; font-family: Mic Shell Dlg }
+td { font-size: 8pt; font-family: Mic Shell Dlg }
+ul { font-size: 8pt; font-family: Mic Shell Dlg }
+	
+	</style>
+    
+    
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+
+	$(document).ready(function(){
+	    $("button").click(function(){
+		txt = this.id;
+		cls = "."+txt;
+        $(cls).toggle();
+		});
+	});
+
+	//$(document).ready(function(){$(".header").click(function(){ $(this).toggleClass("expand").nextUntil("tr.ratingrow").slideToggle(100);	});});
+	
+	</script>
+	
+	
+
+   </head>
+   <body bgcolor="#ffffff" leftmargin="0" marginwidth="20" topmargin="10" marginheight="10" vlink="#9966cc" >
+      	<center>
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="hl_qt">
+				
+				<div align="center"><span class="hl_qt" Localizable_1="True">BOYD GAMING - Project 360 Core</span></div>
+			</td>
+			
+		</tr>
+		<tr>
+			<td class="hl_qt">
+				<div align="center"><span class="hl_qt" Localizable_1="True">Automation Test Report</span></div>
+			</td>
+			
+		</tr>
+		<tr>
+			
+		
+	</table>
+			
+	
+			
+	<br/><br/>
+	
+	
+	
+
+		<table border="0" cellpadding="2" cellspacing="1" width="100%" >
+		<tr>
+			<td bgcolor="white">
+				<table border="0" cellpadding="3" cellspacing="0" width="100%">
+					
+					<tr>
+						<td width="50%" valign="middle" align="center" height="20"><b><span class="Failed" Localizable="True">Start Date & Time : </span></b></td>
+						 <td width="50%" valign="middle" align="center" height="20"><span class="text" id='timestarted'> : 12-10-2017-10-31-24 </span></td> 
+					</tr>
+					<tr>
+					
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+					</tr>
+
+					<tr>
+						<td width="50%" valign="middle" align="center" height="20"><b><span class="Failed" Localizable="True">End Date & Time : </span></b></td>
+						 <td width="50%" valign="middle" align="center" height="20"><span class="text" id='timeended'> </span></td> 
+					</tr>
+					
+					<tr>
+					
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+					</tr>
+					
+					
+					<tr>
+						<td width="50%" valign="middle" align="center" height="20"><b><span class="Failed" Localizable="True">Test Environment :  </span></b></td>
+						 <td width="50%" valign="middle" align="center" height="20"><FONT SIZE='3' color='red' face='Bookman Old Style, Book Antiqua, Garamond'><span class="text" id='envname'> : UAT </span></FONT></td> 
+					</tr>
+					
+					<tr>
+					
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+					</tr>
+					
+					<tr>
+						<td width="50%" valign="middle" align="center" height="20"><b><span class="Failed" Localizable="True">Test URL : </span></b></td>
+						 <td width="50%" valign="middle" align="center" height="20"><FONT SIZE='3' color='red' face='Bookman Old Style, Book Antiqua, Garamond'><span class="text" id='envversion'>: http://10.250.226.33/HaloWebApp/Login.aspx </span></FONT></td> 
+					</tr>
+					
+					<tr>
+					
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+						<td width="50%" class="bg_gray_eee" height="1"></td>
+					</tr>
+					
+				
+					
+					<tr>
+					
+						<td width="50%" height="3"></td>
+						<td width="50%"  height="3"></td>
+					</tr>
+					
+					
+					
+					<table border="1" cellpadding="3" cellspacing="0" width="100%" id="insertrows" class="tablehl">
+					
+					<tr>
+						<th width="18%" class="bg_gray_eee">Transaction</th>
+						<th width="6%">Result</th>
+						<th width="68%">Remarks</th>
+						<th width="8%">ScreenShots</th>
+					</tr>
+					
+					<tr class='bg_yellow'><td width='18%' class='bg_yellow'><font class='hl2'>E2E Testing</font></td><td width='6%'><font class='hl2'></font></td><td width='68%'><font class='hl2'></font></td><td width='8%'></td></tr><tr class='bg_yellow'><td width='18%' class='bg_yellow'><font class='hl2'>MultiplayerEnrollment - Player </font></td><td width='6%'><font class='hl2'></font></td><td width='68%'><font class='hl2'></font></td><td width='8%'></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser4</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_103132.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501964 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103149.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501965 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103204.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501966 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103218.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501967 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103232.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501968 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103246.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501969 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103300.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501970 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103314.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501971 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103329.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501972 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103343.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 406501973 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103358.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser4</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_103407.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501974 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103423.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501975 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103437.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501976 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103451.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501977 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103505.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501978 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103519.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501979 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103533.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501980 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103547.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501981 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103601.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501982 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103616.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 406501983 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103630.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser1</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_103638.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003384 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103658.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003385 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103716.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003386 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103734.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003387 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103753.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003388 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103811.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003389 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103830.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003390 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103848.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003391 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103907.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003392 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103926.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 635003393 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_103944.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser1</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_103953.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003394 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104007.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003395 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104020.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003396 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104034.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003397 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104048.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003398 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104101.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003399 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104114.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003400 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104128.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003401 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104141.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003402 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104155.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 635003403 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104209.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser1</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_104217.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003404 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104232.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003405 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104245.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003406 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104259.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003407 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104312.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003408 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104326.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003409 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104339.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003410 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104353.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003411 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104406.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003412 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104420.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 635003413 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104433.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser7</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_104442.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217662 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104503.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217663 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104521.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217664 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104539.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217665 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104557.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217666 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104616.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217667 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104635.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217668 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104653.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217669 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104711.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217670 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104729.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>MARKETING player enrolled successfully. Player ID is 053217671 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104748.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser7</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_104757.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217672 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104812.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217673 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104826.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217674 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104839.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217675 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104853.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217676 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104906.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217677 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104919.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217678 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104933.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217679 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_104946.png'>IMG</a></font></td></tr><tr class='FailedHigh'><td width='18%' class='bg_gray_eee'><font class='FailedHigh'>New Player Enrollment</font></td><td width='6%'><font class='FailedHigh'>Fail</font></td><td width='68%'><font class='FailedHigh'>Player Enrollment Failed</font></td><td width='8%'><font class='FailedHigh'><a href='Screenshot/EnrollPage10122017_104956.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Transportation player enrolled successfully. Player ID is 053217680 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105009.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Login</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>Login Sucessful with qauser7</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/LoginPage10122017_105018.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217681 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105033.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217682 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105047.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217683 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105100.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217684 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105113.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217685 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105126.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217686 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105139.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217687 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105153.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217688 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105207.png'>IMG</a></font></td></tr><tr class='FailedHigh'><td width='18%' class='bg_gray_eee'><font class='FailedHigh'>New Player Enrollment</font></td><td width='6%'><font class='FailedHigh'>Fail</font></td><td width='68%'><font class='FailedHigh'>Player Enrollment Failed</font></td><td width='8%'><font class='FailedHigh'><a href='Screenshot/EnrollPage10122017_105217.png'>IMG</a></font></td></tr><tr class='PassedHigh'><td width='18%' class='bg_gray_eee'><font class='PassedHigh'>Player Enrollment</font></td><td width='6%'><font class='PassedHigh'>Pass</font></td><td width='68%'><font class='PassedHigh'>NON US or Canada player enrolled successfully. Player ID is 053217689 and Tier Value is RUBY</font></td><td width='8%'><font class='PassedHigh'><a href='Screenshot/EnrollPage10122017_105231.png'>IMG</a></font></td></tr><tr class='bg_ligtblue' id='temp'>
+						<td width="18%" >----</td>
+						<td width="6%" ></td>
+						<td width="68%" ></td>
+						<td width="8%" ></td>
+					</tr>
+										
+					
+					</table>
+					
+
+					
+
+
+				</table>
+			</td>
+		</tr>
+		</table>
+
+		
+		
+		
+
+			
+   </body>
+</html>
